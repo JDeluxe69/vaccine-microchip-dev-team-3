@@ -7,10 +7,14 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import smart.care.data.UserEntity;
 
 /**
  *
@@ -68,6 +72,23 @@ public class LoginController extends HttpServlet {
         
         String login = request.getParameter("login"); //TODO: Get this using body
         String password = request.getParameter("password");
+        
+        // Create the EntityManager
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SmartCarePU");
+        EntityManager em = emf.createEntityManager();
+        
+        em.getTransaction().begin();
+        
+        UserEntity ue = new UserEntity(); 
+        ue.setName(login);
+        ue.setPassword(password);
+        em.persist(ue);
+       
+        
+        em.getTransaction().commit();
+        
+        em.close();
+        emf.close();
         
         processRequest(request, response);
     }
