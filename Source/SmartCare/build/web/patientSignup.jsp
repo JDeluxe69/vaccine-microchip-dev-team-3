@@ -9,9 +9,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Patient Signup</title>
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div align="center" class="allpage">
+            <h3 align="center"> Registeration </h3>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Full name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </div>
     </body>
 </html>
