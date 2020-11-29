@@ -18,15 +18,12 @@
             <h3 align="center"> Registeration </h3>
             <form>
                 <div class="row">
-                    <div class="col">
+                    <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Username">
                     </div>
-                    <div class="col">
+                    <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Full name">
-                    </div>
-                </div>
-
-                <div class="form-row">
+                    </div> 
                     <div class="form-group col-md-6">
                         <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                     </div>
@@ -34,6 +31,11 @@
                         <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
                     </div>
                 </div>
+
+
+                <!--            <div class="form-row">
+                
+                                </div>-->
                 <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
         </div>
