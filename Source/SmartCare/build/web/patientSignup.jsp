@@ -18,9 +18,11 @@
             <h3 align="center"> Registeration </h3>
             <form>
                 <div class="row">
+                    
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Username">
                     </div>
+                    
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Full name">
                     </div> 
