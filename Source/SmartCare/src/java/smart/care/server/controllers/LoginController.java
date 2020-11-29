@@ -79,13 +79,20 @@ public class LoginController extends HttpServlet {
         
         em.getTransaction().begin();
         
+        
         UserEntity ue = new UserEntity(); 
         ue.setName(login);
         ue.setPassword(password);
+        ue.setUsername("first1");
         em.persist(ue);
        
         
         em.getTransaction().commit();
+       
+        
+        em.getTransaction().begin();
+        UserEntity sameEntity = em.find(ue.getClass(),"first1");
+        
         
         em.close();
         emf.close();

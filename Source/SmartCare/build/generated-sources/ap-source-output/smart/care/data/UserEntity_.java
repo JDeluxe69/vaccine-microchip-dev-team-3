@@ -11,6 +11,7 @@ public abstract class UserEntity_ {
 	public static volatile SingularAttribute<UserEntity, String> password;
 	public static volatile SingularAttribute<UserEntity, String> name;
 	public static volatile SingularAttribute<UserEntity, Long> id;
+	public static volatile SingularAttribute<UserEntity, String> username;
 
 }
 

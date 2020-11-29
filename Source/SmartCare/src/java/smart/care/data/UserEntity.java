@@ -15,12 +15,24 @@ import javax.persistence.Id;
  *
  * @author jakubmol
  */
-@Entity(name = "USER")
+@Entity(name = "CLIENT")
 public class UserEntity implements Serializable {
     
     private String name;
     private String password; 
     private long id;
+    private String username;
+
+    
+    @Id
+    @Column(name = "USERNAME")
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
 
 
@@ -31,12 +43,14 @@ public class UserEntity implements Serializable {
         return id;
     }
     
-    //@Column("NAME")
+
+    
+    @Column(name = "NAME")
     public String getName() {
         return name;
     }
 
-    //@Column("PASSWORD")
+    @Column(name = "PASSWORD")
     public String getPassword() {
         return password;
     }
