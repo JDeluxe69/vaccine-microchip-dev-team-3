@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -39,16 +40,23 @@ public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String login = request.getParameter("login"); //TODO: Get this using body
+        String login = request.getParameter("username"); //TODO: Get this using body
         String password = request.getParameter("password");
-        
         LoginContext ctx = new LoginContext();
         String currentPassword = ctx.getPassword(login);
         
-        if(currentPassword.equals(password)){
+        if(currentPassword.equals(password)){    
+           // RequestDispatcher dispatcher = getServletContext()
+           //     .getRequestDispatcher("/dashboard.jsp");
+          //  dispatcher.forward(request, response);
             
-        };
-        processRequest(request, response);
+            response.sendRedirect(request.getContextPath() +  "/dashboard.jsp");
+            processRequest(request, response);
+        }else
+        {
+         response.sendRedirect(request.getContextPath() + "/adminLogin.jsp");
+         processRequest(request, response);
+        }
     }
 
     /**
