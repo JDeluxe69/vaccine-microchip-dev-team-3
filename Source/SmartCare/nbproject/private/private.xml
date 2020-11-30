@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/SmartCare/web/index.jsp</file>
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/SmartCare/web/staffLogin.jsp</file>
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/SmartCare/web/patientLogin.jsp</file>
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/SmartCare/web/patientSignup.jsp</file>
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/SmartCare/web/adminLogin.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/LoginController.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/UserEntity.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/LoginContext.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/conf/persistence.xml</file>
         </group>
     </open-files>
 </project-private>

@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,14 +19,14 @@
         <div class="row">
             <div class="col-6"  align="left">
                 <h3 align="center"> ADMIN LOGIN</h3>
-                <form>
+                <form  action="/SmartCare/api/login" method="post">
                     <div class="form-group">
                         <label for="inputUserName">Username</label>
-                        <input type="username" class="form-control" id="inputUserName" placeholder="Enter Username">
+                        <input type="username" name="username" class="form-control" id="inputUserName" placeholder="Enter Username" value="">
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password" value="">
                     </div>
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="loginCheck">
