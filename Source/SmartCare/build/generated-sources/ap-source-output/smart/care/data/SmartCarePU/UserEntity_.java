@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import smart.care.data.UserEntity;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-11-29T19:09:37")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-11-30T11:56:24")
 @StaticMetamodel(UserEntity.class)
 public class UserEntity_ { 
 
