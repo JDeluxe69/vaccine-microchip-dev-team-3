@@ -17,9 +17,7 @@
 
         <div class="row">
               <div class="col-6"  align="center">
-                <!--<br/>-->
                 <h3 align="center">I Am</h3>
-                <!--<button type="patinetBtn" class="btn btn-primary btn-lg btn-block"> <a href="patientLogin.jsp?id=>">Patient</a></button>-->
                 <a href="patientLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient</a>
                 <a href="staffLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Staff</a>
                 <a href="adminLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Admin</a>

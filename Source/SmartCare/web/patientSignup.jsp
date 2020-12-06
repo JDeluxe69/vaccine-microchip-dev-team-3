@@ -14,16 +14,15 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-<<<<<<< HEAD
         <div align="center" class="allpage">
-            <h3 align="center"> Registeration </h3>
+            <h3 align="center"> Patient Registration </h3>
             <form>
                 <div class="row">
-                    
+
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Username">
                     </div>
-                    
+
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Full name">
                     </div> 
@@ -36,31 +35,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
-=======
-
-        <div class="row">
-            <div class="col-6"  align="left">
-                <h3 align="center">LOGIN</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="inputUserName">Username</label>
-                        <input type="username" class="form-control" id="inputUserName" placeholder="Enter Username">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="loginCheck">
-                        <label class="form-check-label" for="loginCheck">Check me in</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                <div class="center">
-                    <p><a href="patientSignup.jsp?id=>">Create Account</a></p>
-                </div>          
-            </div>
->>>>>>> 690ba47659a0e989cf80b28eb69cad92bd8d5335
         </div>
     </body>
 </html>

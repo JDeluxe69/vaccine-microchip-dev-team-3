@@ -56,9 +56,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("        <div class=\"row\">\r\n");
       out.write("              <div class=\"col-6\"  align=\"center\">\r\n");
-      out.write("                <!--<br/>-->\r\n");
       out.write("                <h3 align=\"center\">I Am</h3>\r\n");
-      out.write("                <!--<button type=\"patinetBtn\" class=\"btn btn-primary btn-lg btn-block\"> <a href=\"patientLogin.jsp?id=>\">Patient</a></button>-->\r\n");
       out.write("                <a href=\"patientLogin.jsp?id=>\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Patient</a>\r\n");
       out.write("                <a href=\"staffLogin.jsp?id=>\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Staff</a>\r\n");
       out.write("                <a href=\"adminLogin.jsp?id=>\" class=\"btn btn-primary btn-lg active\" role=\"button\" aria-pressed=\"true\">Admin</a>\r\n");
