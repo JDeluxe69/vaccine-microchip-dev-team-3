@@ -23,7 +23,8 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">NHS Number</th>
-                                <th scope="col">Full name</th>
+                                <th scope="col">First name</th>
+                                <th scope="col">Last name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Time</th>
                                 <th scope="col">Date</th>
@@ -40,9 +41,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark Otto</td>
-                                <td>@mdopolol.com</td>
+                                <th scope="row">1304666</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>MarkOtto@mail.com</td>
                                 <td>11:00</td>
                                 <td>17.12.2020</td>
                                 <td>NHS</td>
@@ -53,12 +55,45 @@
                                 <td><a href="deletePatient.jsp?id=>">Delete</a></td>                             
                                 <td><a href="updatePatient.jsp?id=>">Update</a></td>
                                 <td><a href="issuePerscription.jsp?id=>">Issue</a></td>
-                            </tr>               
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1304560</th>
+                                <td>Emma</td>
+                                <td>West</td>
+                                <td>EmmaWest@mail.com</td>
+                                <td>13:00</td>
+                                <td>19.12.2020</td>
+                                <td>Private</td>
+                                <td>Consultation</td>
+                                <td>5600</td>
+                                <td>Yes</td>
+
+                                <td><a href="deletePatient.jsp?id=>">Delete</a></td>                             
+                                <td><a href="updatePatient.jsp?id=>">Update</a></td>
+                                <td><a href="issuePerscription.jsp?id=>">Issue</a></td>
+                            </tr>  
+                                                       
+                            <tr>
+                                <th scope="row">1304560</th>
+                                <td>Emma</td>
+                                <td>West</td>
+                                <td>EmmaWest@mail.com</td>
+                                <td>13:00</td>
+                                <td>19.12.2020</td>
+                                <td>Private</td>
+                                <td>Consultation</td>
+                                <td>5600</td>
+                                <td>Yes</td>
+
+                                <td><a href="deletePatient.jsp?id=>">Delete</a></td>                             
+                                <td><a href="updatePatient.jsp?id=>">Update</a></td>
+                                <td><a href="issuePerscription.jsp?id=>">Issue</a></td>
+                            </tr>  
                         </tbody>
                     </table>
                 </div>
             </div>
-            
             <a href="addPatient.jsp?id=>" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add Patient</a>
         </div>
     </div>
