@@ -28,10 +28,27 @@
                         <a href="cancelAppointment.jsp?id=>" class="btn btn-primary active">CANCEL</a>
                     </div>
                 </div>
-                
+
                 <a href="bookAppointment.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Book Appointment</a>
                 <a href="requestPrescription.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Request Prescription</a>
-                <a href="pay.jsp?id=>" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Pay</a>
+
+                <br/>
+                <br/>
+
+                <div class="card text-center">
+                    <div class="card-header">
+                        Pay Now:
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">1000.00.</p>
+                        <a href="pay.jsp?id=>" class="btn btn-primary btn-lg active">PAY</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Pay in full
+                    </div>
+                </div>
+                
+                
             </div>
         </div>
     </body>
