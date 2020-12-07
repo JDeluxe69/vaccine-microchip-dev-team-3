@@ -14,9 +14,10 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-
+        
+        
         <div class="row">
-              <div class="col-6"  align="center">
+            <div class="col-6"  align="center">
                 <h3 align="center">I Am</h3>
                 <a href="patientLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient</a>
                 <a href="staffLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Staff</a>
