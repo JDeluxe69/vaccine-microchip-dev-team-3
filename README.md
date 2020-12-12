@@ -46,6 +46,9 @@
 # staffDashboard.jsp
 <img src="Views/staffDashboard.PNG" width="650" height="200">
 
+# adminLogin.jsp
+<img src="Views/adminLogin.PNG" width="650" height="200">
+
 
 # adminDashboard.jsp
 <img src="Views/adminDashboard.PNG" width="650" height="200">
