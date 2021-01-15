@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author bupal
+ * @author Abdirahman Ali - 13013021
  */
 public abstract class User extends DBObject {
     

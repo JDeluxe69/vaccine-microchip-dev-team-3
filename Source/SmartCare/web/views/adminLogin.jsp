@@ -1,7 +1,7 @@
 <%-- 
     Document   : adminLogin
     Created on : 27-Nov-2020, 19:22:06
-    Author     : bupal
+    Author     : Abdirahman Ali - 13013021
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

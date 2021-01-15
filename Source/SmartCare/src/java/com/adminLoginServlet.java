@@ -15,7 +15,7 @@ import model.DBBean;
 
 /**
  *
- * @author bupal
+ * @author Abdirahman Ali - 13013021
  */
 public class adminLoginServlet extends HttpServlet {
 
