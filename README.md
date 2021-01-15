@@ -1,11 +1,11 @@
 ## SmartCare
 
 ## Group Members:
-### Anthony Adams
-### Abdirahman Ali
-### Andrei Ispas
-### Jakub Mol
-### Neptali Ortega-Gutierrez
+ Anthony Adams,
+ Abdirahman Ali,
+ Andrei Ispas,
+ Jakub Mol,
+ Neptali Ortega-Gutierrez
 
 
 # All the UI
