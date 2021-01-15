@@ -10,8 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Patient Records</title>
-        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
         <div  class="patientRecords" align="center">
@@ -73,7 +72,7 @@
                                 <td><a href="updatePatient.jsp?id=>">Update</a></td>
                                 <td><a href="issuePerscription.jsp?id=>">Issue</a></td>
                             </tr>  
-                                                       
+
                             <tr>
                                 <th scope="row">1304560</th>
                                 <td>Emma</td>
