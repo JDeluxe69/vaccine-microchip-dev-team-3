@@ -1,7 +1,7 @@
 <%-- 
     Document   : patientSignup
     Created on : 27-Nov-2020, 19:22:37
-    Author     : a42ali
+    Author     : Abdirahman Ali - 13013021
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

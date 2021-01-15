@@ -1,7 +1,7 @@
 <%-- 
     Document   : calcRevenue
     Created on : 11-Dec-2020, 14:58:27
-    Author     : a42ali
+    Author     : Abdirahman Ali - 13013021
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

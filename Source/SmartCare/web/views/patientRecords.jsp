@@ -1,7 +1,7 @@
 <%-- 
     Document   : patientRecords
     Created on : 06-Dec-2020, 20:22:49
-    Author     : a42ali
+    Author     : Abdirahman Ali - 13013021
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

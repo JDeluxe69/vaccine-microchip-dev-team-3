@@ -1,7 +1,7 @@
 <%-- 
     Document   : updateStaff
     Created on : 11-Dec-2020, 12:55:48
-    Author     : a42ali
+    Author     : Abdirahman Ali - 13013021
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
