@@ -1,7 +1,7 @@
 <%-- 
     Document   : staffDashboard
     Created on : 06-Dec-2020, 17:59:08
-    Author     : bupal
+    Author     : a42ali
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Staff Dashboard</title>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+          <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div  class="dashboard" align="center">
@@ -29,6 +29,7 @@
                                 <th scope="col">Date</th>
                                 <th scope="col">NHS/Private</th>
                                 <th scope="col">Service</th>
+                                
                                 <th scope="col">Complete</th>
                                 <th scope="col">Forward</th>
                                 <th scope="col">Prescription</th>
@@ -37,9 +38,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row">1230-0650</th>
                                 <td>Mark Otto</td>
-                                <td>@mdopolol.com</td>
+                                <td>markOtto@live.com</td>
                                 <td>11:00</td>
                                 <td>17.12.2020</td>
                                 <td>NHS</td>
@@ -47,8 +48,21 @@
 
                                 <td><a href="complete.jsp?id=>">COMPLETE</a></td>
                                 <td><a href="forwardPatient.jsp?id=>">FORWARD</a></td>
-                                <td><a href="issuePrescription.jsp?id=>">ISSUE</a></td>
-                                
+                                <td><a href="issuePrescription.jsp?id=>">ISSUE</a></td>                               
+                            </tr>
+
+                            <tr>
+                                <th scope="row">1324-8765</th>
+                                <td>Anna John</td>
+                                <td>AnnaJohn@mail.com</td>
+                                <td>13:00</td>
+                                <td>19.12.2020</td>
+                                <td>Private</td>
+                                <td>Consultation</td>
+
+                                <td><a href="complete.jsp?id=>">COMPLETE</a></td>
+                                <td><a href="forwardPatient.jsp?id=>">FORWARD</a></td>
+                                <td><a href="issuePrescription.jsp?id=>">ISSUE</a></td>                               
                             </tr>
                         </tbody>
                     </table>

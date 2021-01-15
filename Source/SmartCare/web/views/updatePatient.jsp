@@ -1,7 +1,7 @@
 <%-- 
     Document   : updatePatient
     Created on : 11-Dec-2020, 16:04:31
-    Author     : bupal
+    Author     : a42ali
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Update Patient</title>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div align="center" class="allpage">

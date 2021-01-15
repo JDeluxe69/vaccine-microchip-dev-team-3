@@ -10,13 +10,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
        <title>Staff Login</title>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
         <div class="row">
-            <div class="col-6"  align="left">
+            <div class="col-6"  align="center">
                 <h3 align="center"> STAFF LOGIN</h3>
                 <form>
                     <div class="form-group">
@@ -26,10 +26,6 @@
                     <div class="form-group">
                         <label for="inputPassword">Password</label>
                         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="loginCheck">
-                        <label class="form-check-label" for="loginCheck">Check me in</label>
                     </div>
                     <button type="submit" class="btn btn-secondary">Login</button>
                 </form>       

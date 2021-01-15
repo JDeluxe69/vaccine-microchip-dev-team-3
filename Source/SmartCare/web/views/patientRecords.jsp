@@ -1,7 +1,7 @@
 <%-- 
     Document   : patientRecords
     Created on : 06-Dec-2020, 20:22:49
-    Author     : bupal
+    Author     : a42ali
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Patient Records</title>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div  class="patientRecords" align="center">
@@ -94,7 +94,7 @@
                     </table>
                 </div>
             </div>
-            <a href="addPatient.jsp?id=>" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add Patient</a>
+            <!--<a href="addPatient.jsp?id=>" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add Patient</a>-->
         </div>
     </div>
 </body>

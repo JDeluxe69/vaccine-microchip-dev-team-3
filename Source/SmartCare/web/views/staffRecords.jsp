@@ -1,7 +1,7 @@
 <%-- 
     Document   : staffRecords
     Created on : 07-Dec-2020, 15:58:24
-    Author     : bupal
+    Author     : a42ali
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,8 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Staff Records</title>
-        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div  class="patientRecords" align="center">
@@ -27,7 +27,6 @@
                                 <th scope="col">Last name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">---</th>
 
                                 <th scope="col">Delete</th>
                                 <th scope="col">Update</th>
@@ -40,7 +39,6 @@
                                 <td>Barb</td>
                                 <td>ronan.Barb@smartcare.com</td>
                                 <td>Doctor</td>
-                                <td>---</td>
 
                                 <td><a href="deleteStaff.jsp?id=>">Delete</a></td>                             
                                 <td><a href="updateStaff.jsp?id=>">Update</a></td>
@@ -52,7 +50,6 @@
                                 <td>James</td>
                                 <td>Mia.James@smartcare.com</td>
                                 <td>Nurse</td>
-                                <td>---</td>
 
                                 <td><a href="deleteStaff.jsp?id=>">Delete</a></td>                             
                                 <td><a href="updateStaff.jsp?id=>">Update</a></td>
