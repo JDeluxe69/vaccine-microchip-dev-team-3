@@ -3,8 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/LoginController.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/nbproject/build-impl.xml</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/comm/ContextKeys.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/updateStaff.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/PatientDashboard.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/index.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/LoginContext.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/filters/LoginFilter.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/LoginController.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/patientRecords.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/addStaff.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/patientSignup.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/staffRecords.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/web.xml</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/adminDashboard.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/updatePatient.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/adminLogin.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/staffLogin.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/staffDashboard.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/patientLogin.jsp</file>
         </group>
     </open-files>
 </project-private>

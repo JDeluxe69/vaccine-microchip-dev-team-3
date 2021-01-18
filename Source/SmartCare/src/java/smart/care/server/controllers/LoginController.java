@@ -10,6 +10,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import smart.care.comm.ContextKeys;
 import smart.care.data.LoginContext;
 
 /**
@@ -44,6 +46,10 @@ public class LoginController extends HttpServlet {
            //     .getRequestDispatcher("/dashboard.jsp");
           //  dispatcher.forward(request, response);
             
+          
+                HttpSession session=request.getSession();  
+                session.setAttribute(ContextKeys.Login,login);  
+          
             response.sendRedirect(request.getContextPath() +  "/dashboard.jsp");
             processRequest(request, response);
         }else
