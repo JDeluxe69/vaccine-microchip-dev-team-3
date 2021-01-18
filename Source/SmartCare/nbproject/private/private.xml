@@ -3,15 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/LoginController.java</file>
-            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/UserEntity.java</file>
-            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/glassfish-resources.xml</file>
-            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/LoginContext.java</file>
-            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/conf/persistence.xml</file>
-=======
-            <file>file:/C:/Users/bupal/OneDrive/Documents/NetBeansProjects/vaccine-microchip-dev-team-3/Source/SmartCare/web/patientSignup.jsp</file>
->>>>>>> 2e4dd87cc34f4dd437c769340d54323603187e8c
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/nbproject/build-impl.xml</file>
         </group>
     </open-files>
 </project-private>
