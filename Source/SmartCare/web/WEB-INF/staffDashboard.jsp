@@ -19,39 +19,7 @@
             <div class="appointment-card">
                 <h5 class="card-header">Welcome to SmartCare</h5>
                 <div class="col-8">
-                    <table class="table table-striped">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">NHS Number</th>
-                                <th scope="col">Full name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Time</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">NHS/Private</th>
-                                <th scope="col">Service</th>
-                                <th scope="col">Complete</th>
-                                <th scope="col">Forward</th>
-                                <th scope="col">Prescription</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark Otto</td>
-                                <td>@mdopolol.com</td>
-                                <td>11:00</td>
-                                <td>17.12.2020</td>
-                                <td>NHS</td>
-                                <td>Surgery</td>
-
-                                <td><a href="complete.jsp?id=>">COMPLETE</a></td>
-                                <td><a href="forwardPatient.jsp?id=>">FORWARD</a></td>
-                                <td><a href="issuePrescription.jsp?id=>">ISSUE</a></td>
-                                
-                            </tr>
-                        </tbody>
-                    </table>
+                   ${table}
                 </div>
             </div>
         </div>
