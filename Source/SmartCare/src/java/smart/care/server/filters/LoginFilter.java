@@ -22,7 +22,6 @@ import smart.care.comm.ContextKeys;
  *
  * @author jakubmol
  */
-@WebFilter("WEB-INF/*")
 public class LoginFilter implements Filter {
     
     
@@ -46,7 +45,7 @@ public class LoginFilter implements Filter {
     HttpServletResponse httpResponse = (HttpServletResponse)response;
     HttpSession session = httpRequest.getSession(false);
     
-    String loginUri = httpRequest.getContextPath() + "/"; 
+    String loginUri = httpRequest.getContextPath() + "/login"; 
     boolean sessionIsNotNull = (session != null) && (session.getAttribute(ContextKeys.Login) != null);
     String requestUri = httpRequest.getRequestURI();
     boolean loginRequest = httpRequest.getRequestURI().equals(loginUri);
@@ -57,10 +56,11 @@ public class LoginFilter implements Filter {
        // }
        
          if (sessionIsNotNull || loginRequest) {
-            //chain.doFilter(request, response);
+            chain.doFilter(request, response);
         } else {
-            //httpResponse.sendRedirect(loginUri);
+           httpResponse.sendRedirect(loginUri);
         }
+
     }
 
     @Override
