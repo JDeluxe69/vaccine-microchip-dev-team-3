@@ -30,7 +30,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DashboardDoctorController</servlet-name>
-        <url-pattern>/DashboardDoctorController</url-pattern>
+        <url-pattern>/doctor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

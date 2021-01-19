@@ -31,6 +31,7 @@ public class DashboardDoctorController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/staffDashboard.jsp").forward(request, response);
     }
 
     /**
