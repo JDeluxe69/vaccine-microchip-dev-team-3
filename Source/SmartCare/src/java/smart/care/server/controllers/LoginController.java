@@ -6,6 +6,8 @@
 package smart.care.server.controllers;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import smart.care.comm.ContextKeys;
+import smart.care.data.ClientDto;
 import smart.care.data.LoginContext;
 
 /**
@@ -54,19 +57,28 @@ public class LoginController extends HttpServlet {
         String login = request.getParameter("username"); //TODO: Get this using body
         String password = request.getParameter("password");
         LoginContext ctx = new LoginContext();
-        String currentPassword = ctx.getPassword(login);
+        ClientDto client;
+       
+        try {
+            client = ctx.getClient(login);
+        } catch (Exception ex) {
+            client = null;
+        }
         
-        if(currentPassword.equals(password)){    
+        if((client != null) && (client.getPassword().equals(password))){    
            // RequestDispatcher dispatcher = getServletContext()
            //     .getRequestDispatcher("/dashboard.jsp");
           //  dispatcher.forward(request, response);
             
           
                 HttpSession session=request.getSession();  
-                session.setAttribute(ContextKeys.Login,login);  
+                session.setAttribute(ContextKeys.Client,client);  
           
-            response.sendRedirect(request.getContextPath() +  "/dashboard.jsp");
-            processRequest(request, response);
+              
+            //response.sendRedirect(request.getContextPath() +  "/dashboard.jsp");
+            //processRequest(request, response);
+            
+            request.getRequestDispatcher("/dashboard").forward(request, response);
         }else
         {
          response.sendRedirect(request.getContextPath() + "/adminLogin.jsp");

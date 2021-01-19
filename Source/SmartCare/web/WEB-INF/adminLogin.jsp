@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-6"  align="left">
                 <h3 align="center"> ADMIN LOGIN</h3>
-                <form  action="/SmartCare/api/login" method="post">
+                <form  action="/SmartCare/login" method="post">
                     <div class="form-group">
                         <label for="inputUserName">Username</label>
                         <input type="username" name="username" class="form-control" id="inputUserName" placeholder="Enter Username" value="">

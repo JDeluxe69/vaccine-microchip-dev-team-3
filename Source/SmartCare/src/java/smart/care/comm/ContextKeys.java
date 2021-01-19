@@ -10,5 +10,5 @@ package smart.care.comm;
  * @author jakubmol
  */
 public class ContextKeys {
-    public static String Login = "login";
+    public static String Client = "client";
 }
