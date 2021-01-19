@@ -16,6 +16,10 @@
         <servlet-name>DashboardController</servlet-name>
         <servlet-class>smart.care.server.controllers.DashboardRouterController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DashboardDoctorController</servlet-name>
+        <servlet-class>smart.care.server.controllers.DashboardDoctorController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>DashboardController</servlet-name>
         <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashboardDoctorController</servlet-name>
+        <url-pattern>/DashboardDoctorController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
