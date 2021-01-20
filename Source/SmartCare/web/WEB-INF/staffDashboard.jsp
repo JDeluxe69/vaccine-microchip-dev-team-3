@@ -19,6 +19,9 @@
             <div class="appointment-card">
                 <h5 class="card-header">Welcome to SmartCare</h5>
                 <div class="col-8">
+                ${appointmentsTable}
+                </div>
+                <div class="col-8">
                    ${table}
                 </div>
             </div>

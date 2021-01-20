@@ -37,6 +37,8 @@ public class DashboardDoctorController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        // Clients  
         LoginContext ctx = new LoginContext();
         List<ClientDto> clients = null;
         try {
@@ -44,6 +46,18 @@ public class DashboardDoctorController extends HttpServlet {
         } catch (Exception ex) {
             Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        // Appointments
+        AppointmentContext appCtx = new AppointmentContext();
+        List<AppointmentDto> appointments = null;
+        try {
+            appointments = appCtx.getAppointments();
+        } catch (Exception ex) {
+            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+
+        request.setAttribute(ContextKeys.AppointmentsTable, GridViewBuilder.BuildAppointmentTable(appointments));
         request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
         request.getRequestDispatcher("/WEB-INF/staffDashboard.jsp").forward(request, response);
     }
