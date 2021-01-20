@@ -93,7 +93,7 @@ private static String BuildClientRows(List<ClientDto> clients)
     
     for(ClientDto client : clients)
     {
-        rows = "                            <tr>\n" +
+        rows = rows + "                            <tr>\n" +
         String.format("                                <th scope=\"row\">%d</th>\n", client.getId()) +
         String.format("                                <td>%s</td>\n", client.getName()) +
         String.format("                                <td>%s</td>\n", client.getUsername()) +
