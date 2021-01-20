@@ -13,7 +13,7 @@
         <servlet-class>smart.care.server.controllers.LoginController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>DashboardController</servlet-name>
+        <servlet-name>DashboardRouterController</servlet-name>
         <servlet-class>smart.care.server.controllers.DashboardRouterController</servlet-class>
     </servlet>
     <servlet>
@@ -25,7 +25,7 @@
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>DashboardController</servlet-name>
+        <servlet-name>DashboardRouterController</servlet-name>
         <url-pattern>/dashboard</url-pattern>
     </servlet-mapping>
     <servlet-mapping>

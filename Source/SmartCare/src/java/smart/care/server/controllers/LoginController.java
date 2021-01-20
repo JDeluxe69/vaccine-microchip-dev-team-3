@@ -25,16 +25,6 @@ import smart.care.data.LoginContext;
  */
 public class LoginController extends HttpServlet {
 
-    
-    public LoginController()
-    {
-    }
-    
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    }
-    
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
@@ -70,19 +60,14 @@ public class LoginController extends HttpServlet {
            //     .getRequestDispatcher("/dashboard.jsp");
           //  dispatcher.forward(request, response);
             
-          
-                HttpSession session=request.getSession();  
-                session.setAttribute(ContextKeys.Client,client);  
-          
-              
-            //response.sendRedirect(request.getContextPath() +  "/dashboard.jsp");
-            //processRequest(request, response);
-            
-            request.getRequestDispatcher("/dashboard").forward(request, response);
+            String ctxPath = request.getContextPath();
+            HttpSession session=request.getSession();  
+            session.setAttribute(ContextKeys.Client,client);  
+            response.sendRedirect(request.getContextPath() +  "/dashboard");
+            //request.getRequestDispatcher("/dashboard").forward(request, response);
         }else
         {
          response.sendRedirect(request.getContextPath() + "/adminLogin.jsp");
-         processRequest(request, response);
         }
     }
 
