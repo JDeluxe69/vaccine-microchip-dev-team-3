@@ -100,8 +100,11 @@ private static String BuildClientRows(List<ClientDto> clients)
         String.format("                                <td>%s</td>\n", client.getAddress()) +
         String.format("                                <td>%tm/%td/%ty</td>\n", client.getDob(),client.getDob(),client.getDob())+
         "\n" +
-        "                                <td><a href=\"deletePatient.jsp?id=>\">Delete</a></td>                             \n" +
-        "                                <td><a href=\"updatePatient.jsp?id=>\">Update</a></td>\n" +
+        "                                <td>\n" +
+        "<form  action=\"/SmartCare/client\" method=\"delete\">\n" +
+        String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Delete</button>\n", client.getId()) +
+                "                                   </form>\n" +
+                "                               </td>\n" +
         "                            </tr>  \n";
     }
     return rows;
@@ -120,7 +123,6 @@ public static String BuildClientTable(List<ClientDto> clients)
 "\n" +
 "\n" +
 "                                <th scope=\"col\">Delete</th>\n" +
-"                                <th scope=\"col\">Update</th>\n" +
 "                            </tr>\n" +
 "                        </thead>\n" +
 "                        <tbody>\n" +
