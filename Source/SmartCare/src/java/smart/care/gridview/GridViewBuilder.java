@@ -5,6 +5,9 @@
  */
 package smart.care.gridview;
 
+import java.util.List;
+import smart.care.data.ClientDto;
+
 /**
  *
  * @author jakubmol
@@ -83,4 +86,48 @@ public static String tempTable =  "<table class=\"table table-striped\">\n" +
 "                            </tr>  \n" +
 "                        </tbody>\n" +
 "                    </table>";
+
+private static String BuildClientRows(List<ClientDto> clients)
+{
+    String rows = ""; 
+    
+    for(ClientDto client : clients)
+    {
+        rows = "                            <tr>\n" +
+        String.format("                                <th scope=\"row\">%d</th>\n", client.getId()) +
+        String.format("                                <td>%s</td>\n", client.getName()) +
+        String.format("                                <td>%s</td>\n", client.getUsername()) +
+        String.format("                                <td>%s</td>\n", client.getAddress()) +
+        String.format("                                <td>%tm/%td/%ty</td>\n", client.getDob(),client.getDob(),client.getDob())+
+        "\n" +
+        "                                <td><a href=\"deletePatient.jsp?id=>\">Delete</a></td>                             \n" +
+        "                                <td><a href=\"updatePatient.jsp?id=>\">Update</a></td>\n" +
+        "                            </tr>  \n";
+    }
+    return rows;
+}
+
+public static String BuildClientTable(List<ClientDto> clients)
+{
+   String table =  "<table class=\"table table-striped\">\n" +
+"                        <thead class=\"thead-light\">\n" +
+"                            <tr>\n" +
+"                                <th scope=\"col\">Id</th>\n" +
+"                                <th scope=\"col\">Name</th>\n" +
+"                                <th scope=\"col\">Username</th>\n" +
+"                                <th scope=\"col\">Address</th>\n" +
+"                                <th scope=\"col\">Date of Birth</th>\n" +
+"\n" +
+"\n" +
+"                                <th scope=\"col\">Delete</th>\n" +
+"                                <th scope=\"col\">Update</th>\n" +
+"                            </tr>\n" +
+"                        </thead>\n" +
+"                        <tbody>\n" +
+                         BuildClientRows(clients) + 
+"                        </tbody>\n" +
+"                    </table>";
+    return table;      
+}
+
 }

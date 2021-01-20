@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,11 +30,10 @@ public class LoginContext {
         info.put("password", "1234"); 
         String sql = String.format("SELECT * FROM APP.CLIENT WHERE USERNAME = '%s'", username);        
         Connection dbConnection;
-        String password = "Not Found";
         try {
              dbConnection = DriverManager.getConnection(url, info);
              ResultSet results = dbConnection.prepareCall(sql).executeQuery();
-             ClientDto client = clientBuilder(results);
+             ClientDto client = clientBuilder(results).get(0);
              return client;
         } catch (SQLException ex) {
             Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
@@ -40,12 +41,32 @@ public class LoginContext {
         return null;
     }
     
-    private ClientDto clientBuilder(ResultSet results)
+    public List<ClientDto> getClients() throws Exception
     {
-        ClientDto client = new ClientDto();
+        String url = "jdbc:derby://localhost:1527/SmartCare"; 
+        Properties info = new Properties(); 
+        info.put("user", "admin1"); 
+        info.put("password", "1234"); 
+        String sql = String.format("SELECT * FROM APP.CLIENT WHERE IS_VERIFIED = 1 AND IS_ACTIVE =  1");        
+        Connection dbConnection;
+        try {
+             dbConnection = DriverManager.getConnection(url, info);
+             ResultSet results = dbConnection.prepareCall(sql).executeQuery();
+             List<ClientDto> clients = clientBuilder(results);
+             return clients;
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    private List<ClientDto> clientBuilder(ResultSet results)
+    {
+        List<ClientDto> clients = new ArrayList<ClientDto>();
         try {
              while(results.next())
              {
+                ClientDto client = new ClientDto();
                 client.setId(results.getInt(ClientTableKeys.Id));
                 client.setName(results.getString(ClientTableKeys.Name));
                 client.setPassword(results.getString(ClientTableKeys.Password));
@@ -55,12 +76,13 @@ public class LoginContext {
                 client.setDob(results.getDate(ClientTableKeys.Dob));
                 client.setAddress(results.getString(ClientTableKeys.Address));
                 client.setIsActive(toBoolean(results.getInt(ClientTableKeys.IsActive)));
-                client.setIsVerified(toBoolean(results.getInt(ClientTableKeys.IsVerified)));                                  
+                client.setIsVerified(toBoolean(results.getInt(ClientTableKeys.IsVerified)));     
+                clients.add(client);
              }
         } catch (SQLException ex) {
             Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return client;
+        return clients;
     }
     
     private boolean toBoolean(int value)
