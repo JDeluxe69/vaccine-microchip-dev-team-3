@@ -33,7 +33,12 @@
                         <label class="form-check-label" for="loginCheck">Check me in</label>
                     </div>
                     <button type="submit" class="btn btn-secondary">Login</button>
-                </form>       
+                </form>
+                </br>
+                </br>
+                <form action="/SmartCare/register" method="get">
+                   <button type="submit" class="btn btn-secondary">Register new user</button>
+                </form>
             </div>
         </div>
     </body>

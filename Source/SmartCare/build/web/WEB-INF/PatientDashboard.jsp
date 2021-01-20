@@ -17,20 +17,31 @@
         <div  class="dashboard" align="center">
             <h1 align="center">Patient Dashboard</h1>
             <div align="center">
-                <div class="appointment-card">
-                    <h5 class="card-header">Welcome to SmartCare</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">You have an appointment:</h5>
-                        <div class="appointment-checkbox">
-                            <input type="checkbox" class="input_time" id="input_time">
-                            <label class="label_time" for="customControlInline">PLACE THE APPOINTMENT TIME IN HERE FROM GOOGLE API</label>
-                        </div>
-                        <a href="cancelAppointment.jsp?id=>" class="btn btn-primary active">CANCEL</a>
+                               <div>
+                    <h4>Book an appointment</h4>
+                <form  action="/SmartCare/book" method="post">
+                    <div class="form-group">
+                        <label for="staffId">Staff number</label>
+                        <input type="text" class="form-control" id="staffId" placeholder="Staff number" name="staffId" value="">
                     </div>
-                </div>
-
-                <a href="bookAppointment.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Book Appointment</a>
-                <a href="requestPrescription.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Request Prescription</a>
+                    <div class="form-group">
+                        <label for="patientId">Patient number</label>
+                        <input type="text" class="form-control" id="patientId" placeholder="Patient number" name="patientId" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Comments </label>
+                        <input type="text" class="form-control" id="comments" placeholder="Comments" name="comments" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDate">Date of Birth</label>
+                        <input type="date" name="appointmentStart" class="form-control" id="inputDate" placeholder="Appointment date" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Duration</label>
+                        <input type="time" class="form-control" id="comments" placeholder="Duration" name="duration" value="">
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Book</button>
+                   </form>    
 
                 <br/>
                 <br/>
@@ -41,7 +52,7 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">1000.00.</p>
-                        <a href="pay.jsp?id=>" class="btn btn-primary btn-lg active">PAY</a>
+                        <a class="btn btn-primary btn-lg active">PAY</a>
                     </div>
                     <div class="card-footer text-muted">
                         Pay in full
