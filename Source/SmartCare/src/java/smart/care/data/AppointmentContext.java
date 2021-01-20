@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.validation.ValidationException;
@@ -75,6 +76,25 @@ public class AppointmentContext {
                 return true; 
             default:
                 throw new ValidationException();
+        }
+    }
+        
+    public boolean insertAppointment(String hostId,String patientId,String comments,String appointmentStart,String appointmentDuration)
+    {
+        double charge = (new Random().nextDouble() * 20);
+        String url = "jdbc:derby://localhost:1527/SmartCare"; 
+        Properties info = new Properties(); 
+        info.put("user", "admin1"); 
+        info.put("password", "1234"); 
+        String sql = String.format("INSERT INTO APP.APPOINTMENT (HOST_ID, PATIENT_ID, COMMENTS, APPOINTMENT_START, APPOINTMENT_DURATION, CHARGE, IS_COMPLETE, IS_PAID) VALUES (%s, %s, '%s', '%s', '%s', %.2f, 0, 0)", hostId, patientId, comments, appointmentStart, appointmentDuration, charge );        
+        Connection dbConnection;
+        try {
+             dbConnection = DriverManager.getConnection(url, info);
+             int results = dbConnection.prepareCall(sql).executeUpdate();
+             return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
     }
 }
