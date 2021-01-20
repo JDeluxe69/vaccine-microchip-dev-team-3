@@ -15,6 +15,11 @@
     </head>
     <body>
         <div  class="dashboard" align="center">
+                        <div>
+                <form action="/SmartCare/logout" method="post">
+                   <button type="submit" class="btn btn-secondary">Logout</button>
+                </form>
+            </div>
             <h1 align="center">Patient Dashboard</h1>
             <div align="center">
                                <div>

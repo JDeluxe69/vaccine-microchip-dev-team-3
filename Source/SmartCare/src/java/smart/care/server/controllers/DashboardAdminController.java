@@ -7,18 +7,24 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import smart.care.comm.ContextKeys;
 import smart.care.data.ClientDto;
+import smart.care.data.LoginContext;
+import smart.care.gridview.GridViewBuilder;
 
 /**
  *
  * @author jakubmol
  */
-public class DashboardRouterController extends HttpServlet {
+public class DashboardAdminController extends HttpServlet {
+
 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -33,23 +39,17 @@ public class DashboardRouterController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ClientDto client = (ClientDto)request.getSession().getAttribute(ContextKeys.Client);
-        String route  = "";
-        switch (client.getClientType().getCode()){
-            case 0: 
-                route = "/doctor";
-            break;
-            case 1:
-                route = "/patient";
-            break;
-            case 2:
-                route = "/doctor"; //"/nurse";
-            break;
-            case 3:
-                route = "/admin";
-            break;    
+        // Clients  
+        LoginContext ctx = new LoginContext();
+        List<ClientDto> clients = null;
+        try {
+            clients = ctx.getClients();
+        } catch (Exception ex) {
+            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        request.getRequestDispatcher(route).forward(request, response);
+        
+        request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
+        request.getRequestDispatcher("/WEB-INF/adminDashboard.jsp").forward(request, response);
     }
 
     /**
@@ -63,6 +63,7 @@ public class DashboardRouterController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
     }
 
     /**

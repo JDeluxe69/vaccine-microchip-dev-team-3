@@ -14,16 +14,24 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+                    <div>
+                <form action="/SmartCare/logout" method="post">
+                   <button type="submit" class="btn btn-secondary">Logout</button>
+                </form>
+            </div>
         <div  class="dashboard" align="center">
-            <h1>Staff Dashboard</h1>
+            <h1>Admin Dashboard</h1>
             <div class="admin-card">
                 <h5 class="card-header">Welcome to SmartCare</h5>
                 <div class="col-8">
                     <br>
-                    
-                    <a href="patientLogin.jsp?id=>" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Patient Records</a>
-                    <a href="staffLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Staff Records</a>
-                    <a href="adminLogin.jsp?id=>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Calculate Revenue</a>
+                                    <div class="col-8">
+                    <h4>All clients</h4>
+                   ${table}
+                </div>
+                    <a  class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Patient Records</a>
+                    <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Staff Records</a>
+                    <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Calculate Revenue</a>
                 </div>
             </div>
         </div>
