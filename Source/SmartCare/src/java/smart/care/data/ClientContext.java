@@ -25,11 +25,11 @@ public class ClientContext {
         Properties info = new Properties(); 
         info.put("user", "admin1"); 
         info.put("password", "1234"); 
-        String sql = String.format("Update CLIENT Set IS_ACTIVE = 0 where CLIENT_ID = '%s'", id);        
+        String sql = String.format("Update APP.CLIENT Set IS_ACTIVE = 0 where CLIENT_ID = %s", id);        
         Connection dbConnection;
         try {
              dbConnection = DriverManager.getConnection(url, info);
-             ResultSet results = dbConnection.prepareCall(sql).executeQuery();
+             int results = dbConnection.prepareCall(sql).executeUpdate();
              return true;
         } catch (SQLException ex) {
             Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);

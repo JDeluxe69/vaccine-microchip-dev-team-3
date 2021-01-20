@@ -9,7 +9,9 @@
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/create.sql</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/ClientDto.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/glassfish-resources.xml</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/calcRevenue.jsp</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/index.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/ClientController.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/LoginContext.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/patientLogin.jsp</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/DashboardDoctorController.java</file>
@@ -17,10 +19,12 @@
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/staffDashboard.jsp</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/LoginController.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/patientRecords.jsp</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/dashboard.jsp</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/web/WEB-INF/web.xml</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/comm/ClientType.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/server/controllers/DashboardRouterController.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/gridview/GridViewBuilder.java</file>
+            <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/ClientContext.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/java/smart/care/data/ClientTableKeys.java</file>
             <file>file:/Users/jakubmol/Dev/vaccine-microchip-dev-team-3/Source/SmartCare/src/conf/persistence.xml</file>
         </group>

@@ -101,7 +101,7 @@ private static String BuildClientRows(List<ClientDto> clients)
         String.format("                                <td>%tm/%td/%ty</td>\n", client.getDob(),client.getDob(),client.getDob())+
         "\n" +
         "                                <td>\n" +
-        "<form  action=\"/SmartCare/client\" method=\"delete\">\n" +
+        "<form  action=\"/SmartCare/client\" method=\"post\">\n" +
         String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Delete</button>\n", client.getId()) +
                 "                                   </form>\n" +
                 "                               </td>\n" +

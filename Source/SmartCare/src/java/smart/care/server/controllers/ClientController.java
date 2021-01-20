@@ -47,12 +47,7 @@ public class ClientController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    }
-    
-    @Override
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        //TODO: deactivate user from the DB
+      //TODO: deactivate user from the DB
       String id = request.getParameter("id");
       ClientContext ctx = new ClientContext();
         try {
@@ -62,6 +57,7 @@ public class ClientController extends HttpServlet {
         }
       response.sendRedirect(request.getContextPath() +  "/dashboard");
     }
+    
 
     /**
      * Returns a short description of the servlet.
