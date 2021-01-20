@@ -6,6 +6,7 @@
 package smart.care.gridview;
 
 import java.util.List;
+import smart.care.data.AppointmentDto;
 import smart.care.data.ClientDto;
 
 /**
@@ -130,6 +131,54 @@ public static String BuildClientTable(List<ClientDto> clients)
 "                        </tbody>\n" +
 "                    </table>";
     return table;      
+}
+
+    public static String BuildAppointmentTable(List<AppointmentDto> appointments)
+{
+   String table =  "<table class=\"table table-striped\">\n" +
+"                        <thead class=\"thead-light\">\n" +
+"                            <tr>\n" +
+"                                <th scope=\"col\">Appointment Id</th>\n" +
+"                                <th scope=\"col\">Staff host Id</th>\n" +
+"                                <th scope=\"col\">Patient Id</th>\n" +
+"                                <th scope=\"col\">Comments</th>\n" +
+"                                <th scope=\"col\">Appointment start</th>\n" +
+"                                <th scope=\"col\">Appointment duration</th>\n" +
+"                                <th scope=\"col\">Charge</th>\n" +
+"\n" +
+"\n" +
+"                                <th scope=\"col\">Delete</th>\n" +
+"                            </tr>\n" +
+"                        </thead>\n" +
+"                        <tbody>\n" +
+                         BuildAppointmentRows(appointments) + 
+"                        </tbody>\n" +
+"                    </table>";
+    return table;      
+}
+
+private static String BuildAppointmentRows(List<AppointmentDto> appointments)
+{
+    String rows = ""; 
+    
+    for(AppointmentDto appointment : appointments)
+    {
+        rows = rows + "                            <tr>\n" +
+        String.format("                                <th scope=\"row\">%d</th>\n", appointment.getId()) +
+        String.format("                                <td>%d</td>\n", appointment.getHostId()) +
+        String.format("                                <td>%d</td>\n", appointment.getPatientId()) +
+        String.format("                                <td>%s</td>\n", appointment.getComments()) +
+        String.format("                                <td>%tm/%td/%ty</td>\n", appointment.getAppointmentStart(),appointment.getAppointmentStart(),appointment.getAppointmentStart())+
+        String.format("                                <td>%tT</td>\n", appointment.getAppointmentDuration()) +
+        "\n" +
+        "                                <td>\n" +
+        "<form  action=\"/SmartCare/client\" method=\"post\">\n" +
+        String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Delete</button>\n", appointment.getId()) +
+                "                                   </form>\n" +
+                "                               </td>\n" +
+        "                            </tr>  \n";
+    }
+    return rows;
 }
 
 }
