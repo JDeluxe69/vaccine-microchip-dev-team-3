@@ -173,7 +173,7 @@ private static String BuildAppointmentRows(List<AppointmentDto> appointments)
         String.format("                                <td>£ %.2f</td>\n", appointment.getCharge()) +
         "\n" +
         "                                <td>\n" +
-        "<form  action=\"/SmartCare/client\" method=\"post\">\n" +
+        "<form  action=\"/SmartCare/remove\" method=\"post\">\n" +
         String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Delete</button>\n", appointment.getId()) +
                 "                                   </form>\n" +
                 "                               </td>\n" +

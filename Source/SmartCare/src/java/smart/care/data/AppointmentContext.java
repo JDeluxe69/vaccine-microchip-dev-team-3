@@ -30,7 +30,7 @@ public class AppointmentContext {
         Properties info = new Properties(); 
         info.put("user", "admin1"); 
         info.put("password", "1234"); 
-        String sql = String.format("SELECT * FROM APP.APPOINTMENT");        
+        String sql = String.format("SELECT * FROM APP.APPOINTMENT WHERE IS_PAID = 0");        
         Connection dbConnection;
         try {
              dbConnection = DriverManager.getConnection(url, info);
@@ -87,6 +87,24 @@ public class AppointmentContext {
         info.put("user", "admin1"); 
         info.put("password", "1234"); 
         String sql = String.format("INSERT INTO APP.APPOINTMENT (HOST_ID, PATIENT_ID, COMMENTS, APPOINTMENT_START, APPOINTMENT_DURATION, CHARGE, IS_COMPLETE, IS_PAID) VALUES (%s, %s, '%s', '%s', '%s', %.2f, 0, 0)", hostId, patientId, comments, appointmentStart, appointmentDuration, charge );        
+        Connection dbConnection;
+        try {
+             dbConnection = DriverManager.getConnection(url, info);
+             int results = dbConnection.prepareCall(sql).executeUpdate();
+             return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+    
+    public boolean deactivateAppointment(String id) throws Exception
+    {
+        String url = "jdbc:derby://localhost:1527/SmartCare"; 
+        Properties info = new Properties(); 
+        info.put("user", "admin1"); 
+        info.put("password", "1234"); 
+        String sql = String.format("Update APP.APPOINTMENT Set IS_PAID = 1 where APPOINTMENT_ID = %s", id);        
         Connection dbConnection;
         try {
              dbConnection = DriverManager.getConnection(url, info);
