@@ -76,7 +76,8 @@ public class LoginContext {
                 client.setDob(results.getDate(ClientTableKeys.Dob));
                 client.setAddress(results.getString(ClientTableKeys.Address));
                 client.setIsActive(toBoolean(results.getInt(ClientTableKeys.IsActive)));
-                client.setIsVerified(toBoolean(results.getInt(ClientTableKeys.IsVerified)));     
+                client.setIsVerified(toBoolean(results.getInt(ClientTableKeys.IsVerified)));   
+                client.setIsNhs(toBoolean(results.getInt(ClientTableKeys.IsNhs)));
                 clients.add(client);
              }
         } catch (SQLException ex) {

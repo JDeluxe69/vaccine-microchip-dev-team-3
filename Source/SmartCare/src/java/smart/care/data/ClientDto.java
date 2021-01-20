@@ -22,6 +22,15 @@ public class ClientDto {
     private Date Dob;
     private boolean IsVerified;
     private boolean IsActive;
+    private boolean IsNhs;
+
+    public boolean isIsNhs() {
+        return IsNhs;
+    }
+
+    public void setIsNhs(boolean IsNhs) {
+        this.IsNhs = IsNhs;
+    }
 
     public int getId() {
         return Id;

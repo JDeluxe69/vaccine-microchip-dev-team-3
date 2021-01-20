@@ -21,4 +21,5 @@ public class ClientTableKeys {
     public static String Dob  = "DOB";
     public static String IsVerified = "IS_VERIFIED";
     public static String IsActive = "IS_ACTIVE";    
+    public static String IsNhs = "IS_NHS";
 }
