@@ -36,4 +36,29 @@ public class ClientContext {
             return false;
         }
     }
+    
+    public boolean insertClient(String login, String  password, String  fullName, String address, String dob, int isNhs, int clientType)
+    {
+        // Set requirement for doctors to be verified
+        int isActive = 1;
+        int isVerified = 1;
+        if(clientType == 0)
+        {
+            isVerified = 0;
+        }
+        String url = "jdbc:derby://localhost:1527/SmartCare"; 
+        Properties info = new Properties(); 
+        info.put("user", "admin1"); 
+        info.put("password", "1234"); 
+        String sql = String.format("INSERT INTO APP.CLIENT (NAME, PASSWORD, USERNAME, CLIENT_TYPE, ADDRESS, DOB, IS_VERIFIED, IS_ACTIVE, IS_NHS) VALUES ('%s', '%s', '%s', %d, '%s', '%s', %d, %d, %d)", fullName, password, login, clientType, address, dob, isVerified, isActive, isNhs );        
+        Connection dbConnection;
+        try {
+             dbConnection = DriverManager.getConnection(url, info);
+             int results = dbConnection.prepareCall(sql).executeUpdate();
+             return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
 }

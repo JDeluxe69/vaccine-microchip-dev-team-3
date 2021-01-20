@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Login</title>
+        <title>Login</title>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
@@ -18,7 +18,7 @@
 
         <div class="row">
             <div class="col-6"  align="left">
-                <h3 align="center"> ADMIN LOGIN</h3>
+                <h3 align="center">LOGIN</h3>
                 <form  action="/SmartCare/login" method="post">
                     <div class="form-group">
                         <label for="inputUserName">Username</label>

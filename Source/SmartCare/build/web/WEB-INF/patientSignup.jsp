@@ -9,55 +9,56 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Patient Signup</title>
+        <title>Signup</title>
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div align="center" class="allpage">
+        <div align="left" class="allpage">
             <h3 align="center"> Registeration </h3>
-            <form>
-                <div class="row">
-                    
-                    <div class="form-group col-md-6">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div>
-                    
-                    <div class="form-group col-md-6">
-                        <input type="text" class="form-control" placeholder="Full name">
-                    </div> 
-                    <div class="form-group col-md-6">
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign up</button>
-            </form>
-
-        <div class="row">
-            <div class="col-6"  align="left">
-                <h3 align="center">LOGIN</h3>
-                <form>
+                <form  action="/SmartCare/register" method="post">
                     <div class="form-group">
                         <label for="inputUserName">Username</label>
-                        <input type="username" class="form-control" id="inputUserName" placeholder="Enter Username">
+                        <input type="text" name="username" class="form-control" id="inputUserName" placeholder="Username" value="">
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFullName">Full Name</label>
+                        <input type="text" name="fullName" class="form-control" id="inputFullName" placeholder="Full Name" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Address" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDob">Date of Birth</label>
+                        <input type="date" name="dob" class="form-control" id="inputDob" placeholder="Date of birth" value="">
+                    </div>
+                                    <div class="form-check">
+                    <label class="radio-inline">
+                      <input type="radio" name="isNhs" value="0">Private
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="isNhs" value="1" checked>NHS
+                    </label>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="loginCheck">
-                        <label class="form-check-label" for="loginCheck">Check me in</label>
+                    <label class="radio-inline">
+                      <input type="radio" name="clientType" value="0">Doctor
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="clientType" value="1" checked>Patient
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="clientType" value="2">Nurse
+                    </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                <div class="center">
-                    <p><a href="patientSignup.jsp?id=>">Create Account</a></p>
-                </div>          
-            </div>
-        </div>
+                    <button type="submit" class="btn btn-secondary">Register</button>
+                </form>  
+
+        
     </body>
 </html>
