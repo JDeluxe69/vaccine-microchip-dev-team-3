@@ -46,11 +46,13 @@ public class LoginFilter implements Filter {
     HttpSession session = httpRequest.getSession(false);
     
     String loginUri = httpRequest.getContextPath() + "/login"; 
+    String registerUri = httpRequest.getContextPath() + "/register"; 
     boolean sessionIsNotNull = (session != null) && (session.getAttribute(ContextKeys.Client) != null);
     String requestUri = httpRequest.getRequestURI(); //TODO: Remove this line 
     boolean loginRequest = httpRequest.getRequestURI().equals(loginUri);
+    boolean registerRequest = httpRequest.getRequestURI().equals(registerUri);
        
-         if (sessionIsNotNull || loginRequest) {
+         if (sessionIsNotNull || loginRequest || registerRequest) {
             chain.doFilter(httpRequest, httpResponse);
         } else {
            httpResponse.sendRedirect(loginUri);

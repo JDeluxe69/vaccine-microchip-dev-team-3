@@ -14,7 +14,6 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-<<<<<<< HEAD
         <div align="center" class="allpage">
             <h3 align="center"> Registeration </h3>
             <form>
@@ -36,7 +35,6 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Sign up</button>
             </form>
-=======
 
         <div class="row">
             <div class="col-6"  align="left">
@@ -60,7 +58,6 @@
                     <p><a href="patientSignup.jsp?id=>">Create Account</a></p>
                 </div>          
             </div>
->>>>>>> 690ba47659a0e989cf80b28eb69cad92bd8d5335
         </div>
     </body>
 </html>
