@@ -170,6 +170,7 @@ private static String BuildAppointmentRows(List<AppointmentDto> appointments)
         String.format("                                <td>%s</td>\n", appointment.getComments()) +
         String.format("                                <td>%tm/%td/%ty</td>\n", appointment.getAppointmentStart(),appointment.getAppointmentStart(),appointment.getAppointmentStart())+
         String.format("                                <td>%tT</td>\n", appointment.getAppointmentDuration()) +
+        String.format("                                <td>£ %.2f</td>\n", appointment.getCharge()) +
         "\n" +
         "                                <td>\n" +
         "<form  action=\"/SmartCare/client\" method=\"post\">\n" +
