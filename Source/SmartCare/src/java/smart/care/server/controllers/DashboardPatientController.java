@@ -15,10 +15,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import smart.care.comm.ClientType;
 import smart.care.comm.ContextKeys;
 import smart.care.data.AppointmentContext;
 import smart.care.data.AppointmentDto;
 import smart.care.data.ClientDto;
+import smart.care.data.LoginContext;
 import smart.care.gridview.GridViewBuilder;
 
 /**
@@ -61,7 +63,28 @@ public class DashboardPatientController extends HttpServlet {
                 clientAppointments.add(appointment);
             }
         }
-            
+        
+        
+        // Clients  
+        LoginContext ctx = new LoginContext();
+        List<ClientDto> clients = null;
+        try {
+            clients = ctx.getClients();
+        } catch (Exception ex) {
+            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        //Filter staff
+        List<ClientDto> nhsClients = new ArrayList<ClientDto>();
+        for(ClientDto currentClient : clients)
+        {
+            if((currentClient.getClientType() == ClientType.NURSE) || (currentClient.getClientType() == ClientType.DOCTOR))
+            {
+                nhsClients.add(currentClient);
+            }
+        }
+        
+        request.setAttribute(ContextKeys.NhsClients, GridViewBuilder.BuildDoctorTable(nhsClients));
         request.setAttribute(ContextKeys.AppointmentsTable, GridViewBuilder.BuildAppointmentTable(clientAppointments)); 
         request.setAttribute(ContextKeys.MyId, client.getId());   
         request.getRequestDispatcher("/WEB-INF/PatientDashboard.jsp").forward(request, response);

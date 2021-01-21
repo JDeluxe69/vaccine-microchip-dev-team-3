@@ -59,6 +59,9 @@
                 <div class="col-8">
                 <h4>My appointments</h4>
                 ${appointmentsTable}
+                
+                <h4>List of current staff</h4>
+                    ${nhsClients}
                 </div>
                     <div class="card-footer text-muted">
                         Pay in full
