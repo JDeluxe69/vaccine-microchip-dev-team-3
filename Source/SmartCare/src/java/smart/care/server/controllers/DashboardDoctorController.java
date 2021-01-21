@@ -7,6 +7,7 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -58,8 +59,18 @@ public class DashboardDoctorController extends HttpServlet {
             Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        // Filter appointments
+        List<AppointmentDto> clientAppointments = new ArrayList<AppointmentDto>();
+        for(AppointmentDto appointment : appointments)
+        {
+            if(appointment.getHostId() == client.getId())
+            {
+                clientAppointments.add(appointment);
+            }
+        }
+        
 
-        request.setAttribute(ContextKeys.AppointmentsTable, GridViewBuilder.BuildAppointmentTable(appointments));
+        request.setAttribute(ContextKeys.AppointmentsTable, GridViewBuilder.BuildAppointmentTable(clientAppointments));
         request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
         request.getRequestDispatcher("/WEB-INF/staffDashboard.jsp").forward(request, response);
         }
