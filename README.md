@@ -1,7 +1,13 @@
+
+
 ## Sprint 3 - SmartCare
+
+ Please use the defult branch - fix/missing-jar
 
 In order to create and populate data first run create.sql then insert.sql then insertAppointments.sql
 
+Group Members:
+Jakub Mol, Anthony Adams, Abdirahman Ali, Neptali Ortega-Gutierrez - (did not participate), Andrei Ispas - (did not participate)
 
 # I have checked and satisfied all tests.
 1.	Login to the system (user = "doctor", password= "doctor") and create a Session lasting for 20 minutes.
