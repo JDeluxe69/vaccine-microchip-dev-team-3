@@ -1,4 +1,7 @@
-## Sprint 2 - SmartCare
+## Sprint 3 - SmartCare
+
+In order to create and populate data first run create.sql then insert.sql then insertAppointments.sql
+
 
 # I have checked and satisfied all tests.
 1.	Login to the system (user = "doctor", password= "doctor") and create a Session lasting for 20 minutes.
