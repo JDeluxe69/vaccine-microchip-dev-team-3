@@ -7,6 +7,7 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import smart.care.comm.ContextKeys;
 import smart.care.data.AppointmentContext;
 import smart.care.data.AppointmentDto;
+import smart.care.data.ClientContext;
 import smart.care.data.ClientDto;
 import smart.care.data.LoginContext;
 import smart.care.gridview.GridViewBuilder;
@@ -73,6 +75,27 @@ public class DashboardAdminController extends HttpServlet {
             }
         }
         
+        //Users to verify
+        ClientContext clientCtx = new ClientContext();
+        List<ClientDto> unverifiedClients = null;
+        try {
+            unverifiedClients = clientCtx.getUnferifiedClients();
+        } catch (Exception ex) {
+            Logger.getLogger(VerifyController.class.getName()).log(Level.SEVERE, null, ex);
+        }  
+        
+        //Filter NHS clients
+        List<ClientDto> nhsClients = new ArrayList<ClientDto>();
+        for(ClientDto currentClient : clients)
+        {
+            if(currentClient.isIsNhs())
+            {
+                nhsClients.add(currentClient);
+            }
+        }
+        
+        request.setAttribute(ContextKeys.NhsClients, GridViewBuilder.BuildClientTable(nhsClients));
+        request.setAttribute(ContextKeys.VerifyClients, GridViewBuilder.BuildDoctorTable(unverifiedClients));
         request.setAttribute(ContextKeys.TotalTurnover, String.format("%.2f", totalTurnover));
         request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
         request.getRequestDispatcher("/WEB-INF/adminDashboard.jsp").forward(request, response);

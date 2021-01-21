@@ -60,6 +60,7 @@ public class LoginContext {
         return null;
     }
     
+    
     private List<ClientDto> clientBuilder(ResultSet results)
     {
         List<ClientDto> clients = new ArrayList<ClientDto>();

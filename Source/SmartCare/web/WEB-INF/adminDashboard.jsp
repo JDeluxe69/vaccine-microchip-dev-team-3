@@ -27,7 +27,13 @@
                 <div class="col-8">
                     <br>
                                     <div class="col-8">
-                    <h4>All clients</h4>
+                                        <h4>Users to verify</h4>  
+                                        ${verifyClients}
+                    <br>                    
+                    <h4>NHS users</h4>
+                    ${nhsClients}
+                    <br>
+                    <h4>All users</h4>
                    ${table}
                 </div>
                     <a  class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Patient Records</a>

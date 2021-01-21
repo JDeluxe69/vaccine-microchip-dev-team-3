@@ -188,4 +188,49 @@ private static String BuildAppointmentRows(List<AppointmentDto> appointments)
     return rows;
 }
 
+private static String BuildDoctorRows(List<ClientDto> clients)
+{
+    String rows = ""; 
+    
+    for(ClientDto client : clients)
+    {
+        rows = rows + "                            <tr>\n" +
+        String.format("                                <th scope=\"row\">%d</th>\n", client.getId()) +
+        String.format("                                <td>%s</td>\n", client.getName()) +
+        String.format("                                <td>%s</td>\n", client.getUsername()) +
+        String.format("                                <td>%s</td>\n", client.getAddress()) +
+        String.format("                                <td>%tm/%td/%ty</td>\n", client.getDob(),client.getDob(),client.getDob())+
+        "\n" +
+        "                                <td>\n" +
+        "<form  action=\"/SmartCare/verify\" method=\"post\">\n" +
+        String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Verify</button>\n", client.getId()) +
+                "                                   </form>\n" +
+                "                               </td>\n" +
+        "                            </tr>  \n";
+    }
+    return rows;
+}
+
+public static String BuildDoctorTable(List<ClientDto> clients)
+{
+   String table =  "<table class=\"table table-striped\">\n" +
+"                        <thead class=\"thead-light\">\n" +
+"                            <tr>\n" +
+"                                <th scope=\"col\">Id</th>\n" +
+"                                <th scope=\"col\">Name</th>\n" +
+"                                <th scope=\"col\">Username</th>\n" +
+"                                <th scope=\"col\">Address</th>\n" +
+"                                <th scope=\"col\">Date of Birth</th>\n" +
+"\n" +
+"\n" +
+"                                <th scope=\"col\">Verify</th>\n" +
+"                            </tr>\n" +
+"                        </thead>\n" +
+"                        <tbody>\n" +
+                         BuildDoctorRows(clients) + 
+"                        </tbody>\n" +
+"                    </table>";
+    return table;      
+}
+
 }
