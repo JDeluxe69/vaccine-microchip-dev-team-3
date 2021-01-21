@@ -26,6 +26,14 @@
                 <h4>This months turnover: £${totalTurnover}</h4>
                 <div class="col-8">
                     <br>
+
+                    <div class="form-group">
+                                            <h4>Change appointment rate</h4>
+                        <input type="text" class="form-control" id="inputPassword" placeholder="Rate per 10min">
+                        <button  class="btn btn-secondary">Change rate</button>
+                    </div>
+
+                    <br>
                                     <div class="col-8">
                                         <h4>Users to verify</h4>  
                                         ${verifyClients}
