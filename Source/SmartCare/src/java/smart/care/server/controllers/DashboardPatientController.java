@@ -7,12 +7,19 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import smart.care.comm.ContextKeys;
+import smart.care.data.AppointmentContext;
+import smart.care.data.AppointmentDto;
 import smart.care.data.ClientDto;
+import smart.care.gridview.GridViewBuilder;
 
 /**
  *
@@ -34,8 +41,29 @@ public class DashboardPatientController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ClientDto client = (ClientDto)request.getSession().getAttribute(ContextKeys.Client);
-        if(client.getClientType().getCode() == 3)
+        if(client.getClientType().getCode() == 1)
         {
+        // Appointments
+        AppointmentContext appCtx = new AppointmentContext();
+        List<AppointmentDto> appointments = null;
+        try {
+            appointments = appCtx.getAppointments();
+        } catch (Exception ex) {
+            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        // Filter appointments
+        List<AppointmentDto> clientAppointments = new ArrayList<AppointmentDto>();
+        for(AppointmentDto appointment : appointments)
+        {
+            if(appointment.getPatientId() == client.getId())
+            {
+                clientAppointments.add(appointment);
+            }
+        }
+            
+        request.setAttribute(ContextKeys.AppointmentsTable, GridViewBuilder.BuildAppointmentTable(clientAppointments)); 
+        request.setAttribute(ContextKeys.MyId, client.getId());   
         request.getRequestDispatcher("/WEB-INF/PatientDashboard.jsp").forward(request, response);
         }
         else{

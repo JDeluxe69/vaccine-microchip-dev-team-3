@@ -24,6 +24,7 @@
             <div align="center">
                                <div>
                     <h4>Book an appointment</h4>
+                    <h5>My Id: ${myId}</h5>
                 <form  action="/SmartCare/book" method="post">
                     <div class="form-group">
                         <label for="staffId">Staff number</label>
@@ -55,10 +56,10 @@
                     <div class="card-header">
                         Pay Now:
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">1000.00.</p>
-                        <a class="btn btn-primary btn-lg active">PAY</a>
-                    </div>
+                <div class="col-8">
+                <h4>My appointments</h4>
+                ${appointmentsTable}
+                </div>
                     <div class="card-footer text-muted">
                         Pay in full
                     </div>
