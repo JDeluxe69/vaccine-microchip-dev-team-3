@@ -39,6 +39,9 @@ public class DashboardAdminController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ClientDto client = (ClientDto)request.getSession().getAttribute(ContextKeys.Client);
+        if(client.getClientType().getCode() == 3)
+        {
         // Clients  
         LoginContext ctx = new LoginContext();
         List<ClientDto> clients = null;
@@ -50,6 +53,10 @@ public class DashboardAdminController extends HttpServlet {
         
         request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
         request.getRequestDispatcher("/WEB-INF/adminDashboard.jsp").forward(request, response);
+        }
+        else{
+            response.sendRedirect(request.getContextPath() +  "/dashboard");
+        }
     }
 
     /**

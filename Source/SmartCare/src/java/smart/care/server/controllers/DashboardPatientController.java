@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import smart.care.comm.ContextKeys;
+import smart.care.data.ClientDto;
 
 /**
  *
@@ -31,7 +33,14 @@ public class DashboardPatientController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ClientDto client = (ClientDto)request.getSession().getAttribute(ContextKeys.Client);
+        if(client.getClientType().getCode() == 3)
+        {
         request.getRequestDispatcher("/WEB-INF/PatientDashboard.jsp").forward(request, response);
+        }
+        else{
+            response.sendRedirect(request.getContextPath() +  "/dashboard");
+        }
     }
 
     /**
