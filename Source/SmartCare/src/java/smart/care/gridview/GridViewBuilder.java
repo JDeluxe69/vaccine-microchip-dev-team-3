@@ -147,6 +147,7 @@ public static String BuildClientTable(List<ClientDto> clients)
 "                                <th scope=\"col\">Charge</th>\n" +
 "\n" +
 "\n" +
+"                                <th scope=\"col\">Pay</th>\n" +
 "                                <th scope=\"col\">Delete</th>\n" +
 "                            </tr>\n" +
 "                        </thead>\n" +
@@ -174,6 +175,11 @@ private static String BuildAppointmentRows(List<AppointmentDto> appointments)
         "\n" +
         "                                <td>\n" +
         "<form  action=\"/SmartCare/remove\" method=\"post\">\n" +
+        String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Pay</button>\n", appointment.getId()) +
+                "                                   </form>\n" +
+                "                               </td>\n" +
+        "                                <td>\n" +
+        "<form  action=\"/SmartCare/delete\" method=\"post\">\n" +
         String.format("<button type=\"submit\" class=\"btn btn-secondary\" name=\"id\" value=\"%d\">Delete</button>\n", appointment.getId()) +
                 "                                   </form>\n" +
                 "                               </td>\n" +

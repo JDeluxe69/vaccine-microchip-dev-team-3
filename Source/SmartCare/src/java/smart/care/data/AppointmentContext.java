@@ -30,7 +30,7 @@ public class AppointmentContext {
         Properties info = new Properties(); 
         info.put("user", "admin1"); 
         info.put("password", "1234"); 
-        String sql = String.format("SELECT * FROM APP.APPOINTMENT WHERE IS_PAID = 0");        
+        String sql = String.format("SELECT * FROM APP.APPOINTMENT WHERE IS_COMPLETE = 0");        
         Connection dbConnection;
         try {
              dbConnection = DriverManager.getConnection(url, info);
@@ -105,6 +105,24 @@ public class AppointmentContext {
         info.put("user", "admin1"); 
         info.put("password", "1234"); 
         String sql = String.format("Update APP.APPOINTMENT Set IS_PAID = 1 where APPOINTMENT_ID = %s", id);        
+        Connection dbConnection;
+        try {
+             dbConnection = DriverManager.getConnection(url, info);
+             int results = dbConnection.prepareCall(sql).executeUpdate();
+             return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(LoginContext.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+    
+        public boolean removeAppointment(String id) throws Exception
+    {
+        String url = "jdbc:derby://localhost:1527/SmartCare"; 
+        Properties info = new Properties(); 
+        info.put("user", "admin1"); 
+        info.put("password", "1234"); 
+        String sql = String.format("Update APP.APPOINTMENT Set IS_COMPLETE = 1 where APPOINTMENT_ID = %s", id);        
         Connection dbConnection;
         try {
              dbConnection = DriverManager.getConnection(url, info);

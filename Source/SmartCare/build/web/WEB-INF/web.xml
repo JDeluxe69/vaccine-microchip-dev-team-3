@@ -48,6 +48,10 @@
         <servlet-name>DashboardAdminController</servlet-name>
         <servlet-class>smart.care.server.controllers.DashboardAdminController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteAppointment</servlet-name>
+        <servlet-class>smart.care.server.controllers.DeleteAppointment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>DashboardAdminController</servlet-name>
         <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAppointment</servlet-name>
+        <url-pattern>/delete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

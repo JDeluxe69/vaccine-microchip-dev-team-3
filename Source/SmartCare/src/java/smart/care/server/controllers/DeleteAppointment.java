@@ -7,26 +7,19 @@ package smart.care.server.controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import smart.care.comm.ContextKeys;
 import smart.care.data.AppointmentContext;
-import smart.care.data.AppointmentDto;
-import smart.care.data.ClientDto;
-import smart.care.data.LoginContext;
-import smart.care.gridview.GridViewBuilder;
 
 /**
  *
  * @author jakubmol
  */
-public class DashboardAdminController extends HttpServlet {
-
+public class DeleteAppointment extends HttpServlet {
 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -41,45 +34,6 @@ public class DashboardAdminController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ClientDto client = (ClientDto)request.getSession().getAttribute(ContextKeys.Client);
-        if(client.getClientType().getCode() == 3)
-        {
-        
-        // Clients  
-        LoginContext ctx = new LoginContext();
-        List<ClientDto> clients = null;
-        try {
-            clients = ctx.getClients();
-        } catch (Exception ex) {
-            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        // Appointments
-        AppointmentContext appCtx = new AppointmentContext();
-        List<AppointmentDto> appointments = null;
-        try {
-            appointments = appCtx.getAppointments();
-        } catch (Exception ex) {
-            Logger.getLogger(DashboardDoctorController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        // Calculate turnover
-        double totalTurnover = 0;
-        for(AppointmentDto appointment : appointments)
-        {
-            if(appointment.isIsPaid())
-            {
-                totalTurnover += appointment.getCharge();
-            }
-        }
-        
-        request.setAttribute(ContextKeys.TotalTurnover, String.format("%.2f", totalTurnover));
-        request.setAttribute(ContextKeys.Table, GridViewBuilder.BuildClientTable(clients));
-        request.getRequestDispatcher("/WEB-INF/adminDashboard.jsp").forward(request, response);
-        }
-        else{
-            response.sendRedirect(request.getContextPath() +  "/dashboard");
-        }
     }
 
     /**
@@ -93,7 +47,14 @@ public class DashboardAdminController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+                String id  = request.getParameter("id");
+        AppointmentContext ctx = new AppointmentContext();
+        try {
+            boolean success = ctx.removeAppointment(id);
+        } catch (Exception ex) {
+            Logger.getLogger(RemoveAppointment.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        response.sendRedirect(request.getContextPath() +  "/dashboard");
     }
 
     /**

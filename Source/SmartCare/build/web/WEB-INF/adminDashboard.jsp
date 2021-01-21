@@ -23,6 +23,7 @@
             <h1>Admin Dashboard</h1>
             <div class="admin-card">
                 <h5 class="card-header">Welcome to SmartCare</h5>
+                <h4>This months turnover: £${totalTurnover}</h4>
                 <div class="col-8">
                     <br>
                                     <div class="col-8">

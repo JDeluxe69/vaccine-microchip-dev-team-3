@@ -14,4 +14,5 @@ public class ContextKeys {
     public static String Table = "table";
     public static String AppointmentsTable = "appointmentsTable";
     public static String MyId = "myId";
+    public static String TotalTurnover = "totalTurnover";
 }
